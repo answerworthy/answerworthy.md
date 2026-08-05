@@ -1,0 +1,33 @@
+name: Standard quality
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - 'standard/**'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate sourced example
+        run: node validator.mjs examples/sourced.answerworthy.md
+      - name: Run validator and standard tests
+        run: node --test tests/*.test.mjs
+      - name: Confirm canonical source files
+        run: |
+          test -f SPECIFICATION.md
+          test -f GRAMMAR.md
+          test -f GOVERNANCE.md
+          test -f validator.mjs
+          test -f examples/minimal.answerworthy.md
+          test -f examples/sourced.answerworthy.md
