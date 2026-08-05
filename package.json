@@ -1,0 +1,21 @@
+{
+  "name": "answerworthy-standard",
+  "version": "0.2.0",
+  "private": false,
+  "type": "module",
+  "description": "The open standard and validator for the canonical answerworthy.md file.",
+  "license": "SEE LICENSE.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kosmopteros/answerworthy.md.git"
+  },
+  "homepage": "https://answerworthy.md/standard",
+  "scripts": {
+    "validate:example": "node validator.mjs examples/sourced.answerworthy.md",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run validate:example && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
