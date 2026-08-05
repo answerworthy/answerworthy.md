@@ -1,101 +1,166 @@
 # answerworthy.md
 
-> **The open AI-native standard for making a business understandable, verifiable and recommendable by AI.**
+> **Answerworthy is the new standard for how businesses become understandable, verifiable and recommendable by AI.**
 
-**Status:** Founding working draft  
-**First canonical publication:** 5 August 2026  
-**Creator and initial steward:** Alexander Pichugin  
-**Canonical domain:** [answerworthy.md](https://answerworthy.md)
+**Canonical domain:** https://answerworthy.md  
+**Current specification:** https://answerworthy.md/standard  
+**Initial steward:** Alexander Pichugin  
+**Specification prose:** CC BY 4.0  
+**Tooling:** Apache-2.0
 
 ## The category
 
-SEO makes pages findable.  
-GEO makes content citable.  
-**Answerworthiness makes a business choosable.**
+SEO makes you findable.  
+GEO makes you citable.  
+**Answerworthiness makes you choosable.**
 
 A business is **answerworthy** when its identity, offer, facts, answers, evidence, limitations and freshness are publicly accessible, machine-readable and independently checkable.
 
-`answerworthy.md` is the canonical AI-native file that carries those facts and evidence.
+Answerworthiness is the condition that technical SEO, content, structured data, GEO, public evidence, PR, reputation, authority, marketing and distribution should collectively produce.
 
-AI systems increasingly mediate discovery, comparison and recommendation. Existing disciplines solve parts of this problem: technical SEO supports retrieval, structured data identifies entities, content answers questions, and public evidence creates corroboration. GEO, AEO and related practices improve how this material appears in generated answers.
+## The canonical file
 
-They do not provide one portable public contract for what a business claims, how consequential claims are supported, where the limits are, and when the information was last checked.
-
-**`answerworthy.md` is that contract.**
-
-## One file
-
-The standard defines one canonical file:
+The standard defines one published file:
 
 ```text
 /answerworthy.md
 ```
 
-The file is UTF-8 Markdown with machine-readable frontmatter and human-readable sections. It is designed to carry:
+`answerworthy.md` is the canonical AI-native public representation of Answerworthiness.
+
+It carries:
 
 - canonical identity and aliases;
-- the offer, audience and material conditions;
+- offer, audience and material conditions;
 - sourced facts and verification dates;
-- self-contained answers to consequential buyer questions;
+- self-contained buyer answers;
 - entities and provenance;
-- known corrections and contradictions;
-- coverage limits and explicit unknowns;
-- freshness policy and conformance state.
+- known corrections;
+- evidence limitations and explicit unknowns;
+- freshness policy;
+- six-dimension mapping;
+- honest conformance state;
+- independent attestation fields when M3 or M4 is supported.
 
-Any JSON, HTML, PDF, score or report emitted by an implementation is a projection of the canonical file. When a projection and `answerworthy.md` disagree, the file wins.
+answerworthy.md is the canonical file. Any JSON, HTML, PDF, dashboard or score that an implementation emits is a projection of it and cannot outrank it.
 
-## First principles
+## The open standard
 
-1. **One canonical file.** One public place concentrates identity, facts, answers, evidence, limits and freshness.
-2. **Declaration is not verification.** Publishing a file proves control of an origin. It does not make every statement true or independently corroborated.
-3. **No evidence, no evaluated claim.** Material findings should resolve to inspectable evidence or remain explicitly unavailable.
-4. **Unknown is not zero.** Blocked access, absent evidence and failed observation must not become fabricated certainty.
-5. **No guaranteed outcome.** Conformance cannot promise ranking, citation, recommendation, traffic, leads or revenue.
-6. **Open implementation.** Anyone may generate, audit, validate or maintain an `answerworthy.md` file. No commercial service owns implementation of the standard.
+This repository is the public source for:
 
-## Relationship to the existing web
+- [`SPECIFICATION.md`](SPECIFICATION.md): the category, one-file model, dimensions, states, acts and implementation boundaries;
+- [`GRAMMAR.md`](GRAMMAR.md): the machine-readable and human-readable file grammar;
+- [`validator.mjs`](validator.mjs): a dependency-free validator for local files and remote URLs;
+- [`examples/`](examples): minimal and sourced examples;
+- [`GOVERNANCE.md`](GOVERNANCE.md): public contribution, compatibility and registry policy;
+- [`CONTRIBUTING.md`](CONTRIBUTING.md): issue and pull-request workflow;
+- [`LICENSE.md`](LICENSE.md): specification and tooling licenses;
+- [`TRADEMARKS.md`](TRADEMARKS.md): naming and certification boundaries;
+- Git history, issues and pull requests: the inspectable evolution of the standard.
 
-`answerworthy.md` complements the web stack rather than replacing it.
+The canonical rendered specification and implementation registry live at https://answerworthy.md.
 
-- HTML remains the primary human-facing surface.
-- Schema.org provides structured assertions inside pages.
-- `robots.txt` governs crawler access.
-- sitemaps support URL discovery.
-- `llms.txt` may point systems towards useful resources.
-- `answerworthy.md` provides the canonical, evidence-aware account of the business itself.
+## Conformance states
 
-SEO, GEO, AEO, content, PR, reputation and structured data remain useful practices. **Answerworthiness is the condition they should collectively produce.**
+- **M0 Present:** a valid file exists at the canonical path and parses.
+- **M1 Structured:** required frontmatter and sections are present and well formed.
+- **M2 Sourced:** material facts carry basis, source class, source and verification date.
+- **M3 Corroborated:** an independent party re-fetched the site and recorded an inspectable attestation inside the file.
+- **M4 Maintained:** the file stays within its freshness policy and receives dated rechecks.
 
-## Day 0 contract
+M0 through M2 may be self-declared. A subject cannot issue M3 about itself.
 
-This founding publication deliberately fixes only four things:
+## Evidence states
 
-1. the category definition of **answerworthiness**;
-2. the canonical filename and root path, **`/answerworthy.md`**;
-3. the evidence and honesty principles above;
-4. the open-standard premise and initial stewardship.
+The standard preserves exact conditions:
 
-The exact grammar, conformance levels, validator contract, governance process and versioning policy remain a public working draft until released here as a numbered specification.
+- verified;
+- unsupported;
+- contradicted;
+- unavailable;
+- stale;
+- incomplete.
 
-That restraint is intentional. The category should be clear from day one; the protocol should earn stability through implementation.
+The standard defines no universal 0 to 100 Answerworthy score.
+
+## Six dimensions
+
+- `access-retrieval`
+- `entity-certainty`
+- `offer-comprehension`
+- `evidence-corroboration`
+- `buyer-question-coverage`
+- `answer-performance`
+
+Mention, citation, recommendation and follow-through remain separate outcomes.
+
+## Four implementation acts
+
+Implementations may perform any honest subset of:
+
+1. **Generate:** draft the file and mark unsupported facts for confirmation.
+2. **Audit:** evaluate the file and live site across six dimensions while preserving contradictions and unavailable evidence.
+3. **Remediate:** apply permitted changes, then update the canonical file.
+4. **Refresh:** re-fetch, recheck, update freshness and record material changes.
+
+Validation and independent corroboration are also explicit implementation capabilities. An implementation declares what it actually does.
+
+## Run the validator
+
+Node 20 or newer. No dependencies.
+
+```bash
+node validator.mjs ./examples/sourced.answerworthy.md
+node validator.mjs https://example.com/answerworthy.md
+```
+
+The validator reports:
+
+- claimed and achieved conformance;
+- canonical fact and answer counts;
+- six-dimension coverage;
+- exact errors and warnings.
+
+It reports conditions rather than a grade.
+
+## Build an implementation
+
+Other implementations are invited.
+
+An implementation may generate, validate, audit, corroborate, remediate or refresh answerworthy.md. A registry listing requires a resolvable public file and accurate capability claims. A corroboration-verified listing also requires an inspectable attestation URL and SHA-256 hash.
+
+See the public registry at https://answerworthy.md/implementations.
+
+## Reference implementation and commercial layer
+
+The **Answerworthy Engine** is the initial reference implementation.
+
+The **Answerworthy Plan** is the founder-reviewed commercial sequence for strengthening Answerworthiness across:
+
+- technical SEO and retrieval;
+- entity, category, offer and audience comprehension;
+- buyer-question coverage and GEO;
+- site architecture, copy, comparisons and alternatives;
+- claims, evidence, original research and proof assets;
+- reviews, directories and third-party corroboration;
+- PR, publishers, experts, communities and authority;
+- partnerships, marketing and distribution;
+- dependencies, permissions, completion tests and rechecks.
+
+The commercial sequence is organised as:
+
+1. Fix now
+2. Build next
+3. Earn externally
+4. Test afterward
+5. Maintain continuously
+
+The standard is free. Becoming the answer is the work.
 
 ## Stewardship
 
-The `answerworthy.md` standard was created by **Alexander Pichugin**, who serves as its initial steward during the working-draft stage.
+Alexander Pichugin is the initial steward.
 
-The steward's role is to maintain the canonical terminology, separate normative requirements from reference-implementation behaviour, preserve evidence discipline, publish versioned drafts and create a credible path towards broader governance as independent implementations emerge.
+The steward maintains the canonical terminology, reviews proposals, protects evidence boundaries, separates normative requirements from reference-implementation behaviour and creates a path towards broader governance as independent implementations emerge.
 
-The word *answerworthy* may be used descriptively by anyone. Conformance, certification and claims of compatibility will require the versioned standard once published.
-
-## What comes next
-
-The next public draft will add:
-
-- the normative file grammar;
-- a minimal conforming example;
-- cumulative conformance states;
-- an open validator contract;
-- licensing and trademark boundaries;
-- a proposal and governance process.
-
-Until then, this repository is the canonical founding record of the category and the standard.
+The public contribution mechanism is GitHub issues and pull requests. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
