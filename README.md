@@ -1,101 +1,195 @@
-# answerworthy.md
+# The Answerworthy Standard
 
-> **The open AI-native standard for making a business understandable, verifiable and recommendable by AI.**
+**What to do to be understood, trusted and recommended by AI — and how to put an agent to work on it.**
 
-**Status:** Founding working draft  
-**First canonical publication:** 5 August 2026  
-**Creator and initial steward:** Alexander Pichugin  
-**Canonical domain:** [answerworthy.md](https://answerworthy.md)
+SEO makes you findable. GEO makes you citable. **Answerworthy is the work that makes you choosable.**
 
-## The category
+Eight conditions decide whether an answering system can recommend a business. This standard names them, tells you how to check each one honestly, and defines `answerworthy.md` — the file where your agent records where you stand and what to do next.
 
-SEO makes pages findable.  
-GEO makes content citable.  
-**Answerworthiness makes a business choosable.**
+Canonical: [answerworthy.md](https://answerworthy.md) · Source: [github.com/answerworthy/answerworthy.md](https://github.com/answerworthy/answerworthy.md)
 
-A business is **answerworthy** when its identity, offer, facts, answers, evidence, limitations and freshness are publicly accessible, machine-readable and independently checkable.
+---
 
-`answerworthy.md` is the canonical AI-native file that carries those facts and evidence.
+## Why
 
-AI systems increasingly mediate discovery, comparison and recommendation. Existing disciplines solve parts of this problem: technical SEO supports retrieval, structured data identifies entities, content answers questions, and public evidence creates corroboration. GEO, AEO and related practices improve how this material appears in generated answers.
+AI visibility should be a capability you own, not a subscription you rent. The work that makes a business recommendable — real buyer questions, public evidence, independent corroboration, distribution — used to need five specialists. Agents make it reachable for small teams. This standard makes it portable: your questions, findings, decisions and history live in one file you keep.
 
-They do not provide one portable public contract for what a business claims, how consequential claims are supported, where the limits are, and when the information was last checked.
+It does not tell AI what to believe about you. It tells your agent how to build the public reasons that make trust defensible.
 
-**`answerworthy.md` is that contract.**
+Any business, any language, any geography.
 
-## One file
+## Start
 
-The standard defines one canonical file:
+Paste this into Claude Code, Cursor, Codex, ChatGPT, or any capable agent. Fill the three lines at the top.
 
-```text
-/answerworthy.md
+```
+Read the Answerworthy Standard:
+https://raw.githubusercontent.com/answerworthy/answerworthy.md/main/README.md
+
+My business: <name> · <website> · <priority market and language>
+My buyers: <who they are, and the situation they're in before they know my name>
+What you may change: <nothing yet, propose only | the site files I've given you | my CMS>
+
+Then:
+
+1. INSPECT the eight conditions against my actual public presence: the site as
+   raw HTML, whether AI crawlers really get in, what independent sources say
+   about me, and what assistants say right now when asked my buyers' questions.
+   Anything you cannot reach, record as unreached — never guess it.
+2. WRITE answerworthy.md: where I stand on each of the eight conditions, with
+   the evidence you actually saw, and the ordered work to close the gaps.
+3. FIX only what I authorised above. One change at a time. Tell me what you
+   changed and why, in plain language.
+4. STOP at two lines: any claim about my business, and anything a third party
+   would receive. Draft them for me; never assert or send them yourself.
+5. RE-VERIFY by refetching what you changed, then update the file.
+
+No score. Show me what changed and what is left.
 ```
 
-The file is UTF-8 Markdown with machine-readable frontmatter and human-readable sections. It is designed to carry:
+Keep `answerworthy.md` wherever your working files live — a repo, a shared drive, a docs folder. If you have version control, use it. Every future session starts by reading it.
 
-- canonical identity and aliases;
-- the offer, audience and material conditions;
-- sourced facts and verification dates;
-- self-contained answers to consequential buyer questions;
-- entities and provenance;
-- known corrections and contradictions;
-- coverage limits and explicit unknowns;
-- freshness policy and conformance state.
+## The eight conditions
 
-Any JSON, HTML, PDF, score or report emitted by an implementation is a projection of the canonical file. When a projection and `answerworthy.md` disagree, the file wins.
+In order. Each one gates the ones below it: there is no point earning press if an assistant cannot read your site.
 
-## First principles
+**1 · Reachable** — *Can an answering system actually fetch and read you?*
+Content present in raw HTML without JavaScript. AI crawlers genuinely allowed — check the CDN and bot-protection rules, not just `robots.txt`. Indexable, reasonably fast, accessible. Most failures here are invisible from the browser and silent.
 
-1. **One canonical file.** One public place concentrates identity, facts, answers, evidence, limits and freshness.
-2. **Declaration is not verification.** Publishing a file proves control of an origin. It does not make every statement true or independently corroborated.
-3. **No evidence, no evaluated claim.** Material findings should resolve to inspectable evidence or remain explicitly unavailable.
-4. **Unknown is not zero.** Blocked access, absent evidence and failed observation must not become fabricated certainty.
-5. **No guaranteed outcome.** Conformance cannot promise ranking, citation, recommendation, traffic, leads or revenue.
-6. **Open implementation.** Anyone may generate, audit, validate or maintain an `answerworthy.md` file. No commercial service owns implementation of the standard.
+**2 · Identified** — *Does it know who you are, without contradiction?*
+One clear entity: name, aliases, people, products, relationships. The same facts on your site and on every profile that mentions you. Contradictions across sources are worse than silence.
 
-## Relationship to the existing web
+**3 · Understood** — *Does it know what you sell, to whom, and on what terms?*
+Audience, problem, offer, commercial shape, price posture, what you are *not* for. Stated in the buyer's words, not in invented-category language.
 
-`answerworthy.md` complements the web stack rather than replacing it.
+**4 · Answering** — *Do you answer the questions buyers ask before they know your name?*
+The fuzzy, pre-brand questions: "which option works for a small regulated team?" — not "is Acme any good?". Each commercial page should own a real question family. Answers must be self-contained enough to survive being quoted out of context.
 
-- HTML remains the primary human-facing surface.
-- Schema.org provides structured assertions inside pages.
-- `robots.txt` governs crawler access.
-- sitemaps support URL discovery.
-- `llms.txt` may point systems towards useful resources.
-- `answerworthy.md` provides the canonical, evidence-aware account of the business itself.
+**5 · Evidenced** — *Can your consequential claims be checked?*
+Every claim that would move a decision needs a method, a dated sample, its scope and its limits, at a source someone can open. A claim without evidence is a liability the moment an assistant repeats it.
 
-SEO, GEO, AEO, content, PR, reputation and structured data remain useful practices. **Answerworthiness is the condition they should collectively produce.**
+**6 · Corroborated** — *Does anyone independent back you up?*
+Reviews on platforms your buyers use, directories, marketplaces, institutional and expert references. This is the part you cannot self-publish, which is exactly why it carries weight.
 
-## Day 0 contract
+**7 · Distributed** — *Is the evidence where buyers and systems encounter it?*
+Publishers, editorial, communities, partners, associations, the surfaces of your market. Evidence nobody meets does no work.
 
-This founding publication deliberately fixes only four things:
+**8 · Observed** — *What do assistants actually say right now?*
+Ask your buyers' real questions and record what comes back, dated, with provider and locale: `primary-recommendation` · `shortlisted` · `mentioned` · `mischaracterised` · `not-found`. One answer on one day is an anecdote, not a position.
 
-1. the category definition of **answerworthiness**;
-2. the canonical filename and root path, **`/answerworthy.md`**;
-3. the evidence and honesty principles above;
-4. the open-standard premise and initial stewardship.
+A tool that checks conditions 1 and 8 is doing useful work on two of eight. The chain is the point.
 
-The exact grammar, conformance levels, validator contract, governance process and versioning policy remain a public working draft until released here as a numbered specification.
+## The file
 
-That restraint is intentional. The category should be clear from day one; the protocol should earn stability through implementation.
+Six sections, fixed order. It is a working document — it records your gaps, your unsupported claims and your competitors, so treat it like any internal file.
 
-## Stewardship
+```markdown
+---
+answerworthy: "1.0"
+subject: "Acme GmbH"
+website: https://acme.example/
+market: "Germany · de-DE"
+audited: 2026-08-06
+refresh_days: 30
+---
 
-The `answerworthy.md` standard was created by **Alexander Pichugin**, who serves as its initial steward during the working-draft stage.
+## Outcomes     ← what buyers must be able to conclude. The agent's goal.
+## Scope        ← who you're for, which alternatives, honest exclusions.
+## Rules        ← the honesty core. Copy verbatim.
+## State        ← where you stand on the eight conditions, with evidence.
+## Actions      ← the ordered work to close the gaps.
+## Maintenance  ← how this stays true.
+```
 
-The steward's role is to maintain the canonical terminology, separate normative requirements from reference-implementation behaviour, preserve evidence discipline, publish versioned drafts and create a credible path towards broader governance as independent implementations emerge.
+**Outcomes** lead, in buyer language and falsifiable: *"When a small regulated team asks an assistant which option works for them, Acme is a candidate it can defensibly recommend, with inspectable evidence for every claim it would repeat."* Not "rank #1", not "score 90".
 
-The word *answerworthy* may be used descriptively by anyone. Conformance, certification and claims of compatibility will require the versioned standard once published.
+**State** records one entry per condition you checked:
 
-## What comes next
+```
+### Homepage onboarding claim
+condition: evidenced
+state: unsupported
+claim: "Reduces onboarding time by 40%"
+evidence:
+  - claim visible at https://acme.example/product — retrieved 2026-08-06
+needed:
+  - reproducible methodology with dated sample and limitations
+  - independent corroboration
+```
 
-The next public draft will add:
+Conditions: `reachable` · `identified` · `understood` · `answering` · `evidenced` · `corroborated` · `distributed` · `observed`.
 
-- the normative file grammar;
-- a minimal conforming example;
-- cumulative conformance states;
-- an open validator contract;
-- licensing and trademark boundaries;
-- a proposal and governance process.
+States: `verified` · `unsupported` · `contradicted` · `missing` · `unreached` · `stale` · `incomplete`. `verified` needs current evidence someone else could open. `unreached` is what you write when you could not check — never a zero, never a guess.
 
-Until then, this repository is the canonical founding record of the category and the standard.
+**Actions** say what to do, what done looks like, and how to re-check:
+
+```
+### Publish the onboarding-time methodology
+serves: evidenced
+state: ready
+needs: human
+why: the 40% claim is a primary buying reason; unsupported, it is a liability
+done_when:
+  - public methodology page with sample, method and limitations
+  - the site's claim wording matches the evidence
+verify:
+  - refetch the page; compare the claim against the retained study
+```
+
+Action states: `ready` · `blocked` · `waiting on someone else` · `done`. `needs:` is `agent` or `human` — human for any claim, and anything a third party receives.
+
+## Rules
+
+Copy these into every file, verbatim.
+
+1. **Claims are objects under evaluation.** A claim appears here only with an evidence state. Writing it down makes nothing true.
+2. **No evidence, no evaluated claim.** Cite what was observed, name what's needed, or both.
+3. **Unreached is not zero.** Blocked, absent or failed observation is recorded as exactly that — never as a failure, a zero, or invented certainty.
+4. **No fabrication, no strengthening.** Never invent sources, dates, quotes, reviews or results. Never restate an unsupported claim as established. Inferred buyer questions stay labelled inferred and never count as demand.
+5. **Earned means earned.** No fake or incentivised reviews, no astroturfing, no self-review posing as independence, no bot-wall bypass. Links and mentions are outcomes of relevance, never quotas.
+6. **Two things always need a human.** Any claim about the business, and anything a third party would receive. An agent may draft both; it may assert or send neither.
+7. **Numbers carry their coverage.** Any figure states how much it actually saw. Never blend different questions into one headline number. The output is the work, not a grade.
+
+## What your agent may change
+
+Not a permission system — a boundary. You tell it what it can touch; these two lines hold regardless.
+
+| | |
+|---|---|
+| **Your own surfaces** | Pages, answers, markup, access config, internal links, discovery files — whatever access you granted. Change one thing at a time and say what changed. |
+| **Claims** | Always human. The agent may build the page that would carry a claim and draft the wording; you decide whether it is true enough to publish. |
+| **Third parties** | Always human. Reviews, outreach, PR, partnerships, profiles you must own — drafted by the agent, sent by you. |
+
+If your site deploys automatically, the agent proposes changes for your review before they go live.
+
+## Why this isn't a scanner
+
+| Scanner | Answerworthy |
+|---|---|
+| Returns a score | Returns changed pages and an ordered queue |
+| Your website | Eight conditions, including what you cannot self-publish |
+| Your brand name in prompts | The buyer's question *before* they know your brand |
+| A dashboard you revisit | A file you keep, that agents continue from |
+| One blended number | Separate findings, each with its evidence |
+
+Tools that check one condition are useful. This is the chain.
+
+## Conformance
+
+A file is **declared** when it has valid frontmatter and all six sections; **evidenced** when every entry in State has a state and an evidence basis and the Rules are followed; **maintained** when the audit date is fresh, completed actions are re-verified, and history is kept.
+
+Anyone may implement this — agents, tools, agencies, the business itself. No service owns implementation, including the author's. Implementations should say which of the eight conditions they actually cover. Partial coverage is normal and welcome; presenting one condition as the whole chain is not.
+
+Following this standard structures evidence and closes gaps. It does not guarantee ranking, citation, recommendation or revenue.
+
+## License
+
+Text CC BY 4.0 · template and example CC0 — copy them freely.
+
+Created and stewarded by Alexander Pichugin. Changes by pull request in the open.
+
+---
+
+**Next:** copy [`template/answerworthy.md`](./template/answerworthy.md), or see [`examples/acme/answerworthy.md`](./examples/acme/answerworthy.md).
+
+*The standard is free. Becoming the answer is the work.*
