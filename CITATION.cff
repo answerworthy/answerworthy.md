@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite The Answerworthy Standard using the preferred citation below."
+title: "The Answerworthy Standard"
+type: software
+authors:
+  - family-names: "Pichugin"
+    given-names: "Alexander"
+version: "1.1-draft"
+url: "https://answerworthy.md"
+repository-code: "https://github.com/answerworthy/answerworthy.md"
+license: "CC-BY-4.0"
+preferred-citation:
+  type: standard
+  title: "The Answerworthy Standard"
+  authors:
+    - family-names: "Pichugin"
+      given-names: "Alexander"
+  year: 2026
+  version: "1.1-draft"
+  url: "https://answerworthy.md"
