@@ -1,154 +1,229 @@
 ---
-answerworthy: "1.0"
+answerworthy: "1.0-draft"
+standard: "https://raw.githubusercontent.com/kosmopteros/answerworthy.md/main/README.md"
 subject: "Acme Analytics GmbH"
-website: https://acme.example/
-market: "Germany · de-DE"
-audited: 2026-08-06
-refresh_days: 30
+website: "https://acme.example/"
+updated: 2026-08-14
 ---
 
-## Outcomes
+## Sources
 
-- When a small regulated team asks an assistant "which analytics option works for us without a compliance headache?", Acme is a candidate it can defensibly recommend, with inspectable evidence for every claim it would repeat.
-- Acme's onboarding-time claim is either publicly supported by a dated methodology or taken off the site.
-- At least two independent sources — a review platform, editorial or institutional — corroborate what Acme says about itself.
+- `https://acme.example/` — public; homepage, product, pricing, and documentation inspected 2026-08-14
+- `Acme-sales-deck.pdf` — private; supplied by Acme and inspected 2026-08-14
+- `https://reviews.example/acme` — public; inspected 2026-08-14
+- `OBS-QF1-2026-08-14` — private observation log containing retained assistant outputs
 
 ## Scope
 
-- who this is for: a small regulated team choosing analytics tooling with no dedicated compliance staff
-- their pre-brand question: "which analytics tool can a small regulated team run without a compliance specialist?"
-- alternatives they compare: BigDash, MetricsCo
-- not for: enterprises with in-house compliance teams
-- out of scope here: US market, customer-private data
+- coverage: full
+- market: Germany
+- language: de-DE
+- buyers: small regulated teams choosing analytics software without a dedicated compliance specialist
+  - provenance: researched
+- alternatives:
+  - BigDash — provenance: observed
+  - MetricsCo — provenance: researched
+- non-fit: enterprises requiring governance controls Acme does not provide
+  - provenance: supplied
 
-## Rules
+### QF1 — choose analytics software for a small regulated team without dedicated compliance staff
 
-1. Claims are objects under evaluation — a claim appears here only with an evidence state. Writing it down makes nothing true.
-2. No evidence, no evaluated claim — cite what was observed, name what's needed, or both.
-3. Unreached is not zero — blocked, absent or failed observation is recorded as such, never as failure.
-4. No fabrication, no strengthening — invent nothing; never restate unsupported as established; inferred questions never count as demand.
-5. Earned means earned — no fake or incentivised reviews, no astroturfing, no self-review posing as independence, no bot-wall bypass; links are outcomes of relevance, never quotas.
-6. Two things always need a human — any claim about the business, and anything a third party would receive. Draft both; assert or send neither.
-7. Numbers carry their coverage — any figure states how much it actually saw; never one blended headline number.
+- decision: select an analytics product the team can deploy and govern with limited internal compliance expertise
+- provenance: researched
+- query variants:
+  - "Welche Analytics-Lösung eignet sich für ein kleines reguliertes Team ohne Compliance-Spezialisten?" — provenance: researched
+  - "einfache datenschutzkonforme Analytics für kleines Team" — provenance: inferred
+- material criteria:
+  - supported controls and regulatory context — provenance: researched
+  - deployment and onboarding effort — provenance: supplied
+  - team size and expertise required — provenance: researched
+  - pricing and contractual commitment — provenance: observed
+  - limitations against enterprise alternatives — provenance: inferred
+
+## Outcomes
+
+- **O1 — QF1:** An answering system can correctly determine whether Acme is a defensible fit over BigDash and MetricsCo for a small regulated German team, and support every consequential stated reason from the public corpus.
+- **O2 — QF1:** When a buyer requires enterprise governance controls Acme does not provide, an answering system does not present Acme as the better fit.
+- **O3 — QF1:** If an answering system mentions Acme's onboarding-time advantage, it states the supported scope and limits rather than repeating "40%" as a universal fact.
 
 ## State
 
-### AI crawler access at the CDN
-condition: reachable
-state: contradicted
-evidence:
-  - robots.txt allows OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot
-  - the CDN "block AI bots" rule returns 403 to Claude-SearchBot and PerplexityBot — tested 2026-08-06
-needed:
-  - the CDN rule to match the stated robots policy
+### S1 — Access to decision-useful commercial information
 
-### Raw-HTML readability of commercial pages
 condition: reachable
 state: verified
 evidence:
-  - product and pricing pages return full content in raw HTML with JavaScript disabled — 2026-08-06
+  - homepage, product, pricing, and documentation were reachable without an access challenge through the declared Web test paths — verified 2026-08-14
+  - decision-useful product and pricing information was present in the fetched content — verified 2026-08-14
 
-### Company name across public profiles
+### S2 — Company identity across public profiles
+
 condition: identified
-state: unreached
+state: incomplete
 evidence:
-  - two of five known profiles checked; the rest sit behind logins this agent has no access to
+  - website and review profile use the same company and product names — checked 2026-08-14
+  - two other known profiles require account access unavailable to this assessment
 needed:
-  - the remaining profiles checked by someone who can sign in
+  - inspect the remaining profiles for legal entity, product, and location consistency
 
-### The regulated small-team question
+### S3 — Comparative fit behind the homepage compression
+
+condition: understood
+state: incomplete
+compression: "compliance without complexity"
+evidence:
+  - the phrase is a useful concise proposition for people, but no public decision-grade expansion states which controls, workflows, team sizes, or trade-offs make Acme a stronger fit than BigDash or MetricsCo
+  - the private deck states that Acme is not intended for enterprise governance, but this boundary is absent from the public corpus
+needed:
+  - Acme-validated fit, trade-offs, constraints, and non-fit against both alternatives
+  - a public expansion that preserves rather than materially revises the impression created by "compliance without complexity"
+  - public wording supported by evidence
+
+### S4 — QF1 coverage in de-DE
+
 condition: answering
 state: missing
-provenance: inferred from the buyer situation — not observed demand
+evidence:
+  - no inspected de-DE surface answers QF1 across the material criteria — checked 2026-08-14
 needed:
-  - a page in de-DE answering the pre-brand question, with fit boundaries and limits
+  - decision-useful QF1 coverage using validated fit, terms, trade-offs, and limits
+  - a discoverable route from relevant commercial pages
 
-### Homepage onboarding claim
+### S5 — Homepage onboarding claim
+
 condition: evidenced
 state: unsupported
 claim: "Reduces onboarding time by 40%"
 evidence:
-  - claim visible at https://acme.example/product — retrieved 2026-08-06
+  - claim visible at https://acme.example/product — inspected 2026-08-14
+  - the private deck repeats the figure but contains no method, baseline, sample, or limits
 needed:
-  - reproducible methodology with dated sample and limitations
-  - independent corroboration
+  - evidence appropriate to a comparative timing claim: baseline, method, sample, scope, date, limits, and exceptions
+  - public wording no stronger than the retained evidence
 
-### Independent review presence
+### S6 — Independent support for small-team fit
+
 condition: corroborated
 state: missing
 evidence:
-  - no Acme listing on either review platform German buyers use for this category — checked 2026-08-06
+  - the public review profile contains two ratings but no decision-relevant text about regulated small-team fit
+  - two partner pages repeat Acme's product copy without independent observation
 needed:
-  - a claimed, accurate profile and a genuine, uncompensated review process
+  - an independent source that establishes a decision-relevant fact from its own evidence or experience
 
-### What assistants say today
-condition: observed
+### S7 — Decision evidence across relevant German surfaces
+
+condition: distributed
 state: incomplete
 evidence:
-  - the pre-brand question asked once, on one provider, 2026-08-05 — outcome `mentioned`, not recommended
+  - Acme is present on one review platform and two partner sites
+  - none of those surfaces carries evidence about QF1 fit, onboarding, or non-fit
 needed:
-  - the same question across providers and repeated runs before this counts as a position, not an anecdote
+  - validated decision-useful information on surfaces buyers in this scope actually use
+
+### S8 — QF1 assistant observation
+
+condition: observed
+state: incomplete
+query: "Welche Analytics-Lösung eignet sich für ein kleines reguliertes Team ohne Compliance-Spezialisten?"
+provider: "<retained in observation log>"
+model: unreached
+mode: search-enabled
+observed_at: 2026-08-14T14:00:00+02:00
+locale: de-DE
+context: "fresh session; Germany; no account personalisation; no preceding conversation"
+runs: 1
+position: mentioned
+representation: incomplete
+fit: uncertain
+stated_reasons:
+  - "Acme may suit smaller teams because it is simpler to deploy."
+reason_support: unsupported
+evidence_ref:
+  - `OBS-QF1-2026-08-14`
+needed:
+  - repeated observations under declared conditions
+  - comparison of each stated reason against the inspected public corpus
 
 ## Actions
 
-### Align the CDN bot rules with the stated robots policy
-serves: reachable
-state: done
-needs: agent
-why: the site says assistants may read it while the CDN refuses them — nothing below this matters until it's true
-done_when:
-  - all five named agents receive 200 on the homepage and commercial pages
-verify:
-  - refetch with each user agent; confirm no challenge or 403
-done_on: 2026-08-06
+### A1 — Validate Acme's QF1 fit and non-fit
 
-### Write the regulated small-team answer page
-serves: answering
+advances: [O1, O2]
+serves: [understood, evidenced]
+state: waiting-human
+needs: [human]
+why: the public corpus cannot support a correct comparative decision until Acme validates which differences matter and where they stop applying
+done_when:
+  - decision-relevant differences, trade-offs, constraints, and exclusions are documented against BigDash and MetricsCo
+  - each consequential distinction has evidence or remains explicitly unsupported
+  - Acme approves the business-side facts and boundaries
+verify:
+  - compare every approved statement with retained evidence
+  - test whether the same facts support O1 and reject Acme under O2
+
+### A2 — Resolve the onboarding-time claim
+
+advances: [O3]
+serves: [evidenced]
+state: waiting-human
+needs: [human]
+why: "40%" can change a buying decision and is currently unsupported
+done_when:
+  - Acme publishes sufficient evidence, narrows the claim to what the evidence supports, or removes it
+verify:
+  - refetch the claim and evidence
+  - repeat the affected QF1 observation and inspect the stated reasons
+
+### A3 — Create the decision-grade QF1 expansion in de-DE
+
+advances: [O1, O2]
+serves: [understood, answering, evidenced]
+state: blocked
+needs: [agent, human]
+why: the concise proposition may remain concise; the missing work is a public explanation of the fit, terms, trade-offs, and limits, but publishing before A1 and A2 would make unsupported positioning more legible
+done_when:
+  - the public corpus covers QF1 using approved distinctions, terms, trade-offs, and limits
+  - the expansion preserves rather than materially revises the impression created by the concise proposition
+  - the explanation remains intelligible when encountered away from its original page
+  - relevant commercial pages provide a discoverable route to it without becoming unnecessarily verbose
+verify:
+  - refetch the published material
+  - compare the compression with the expanded explanation for consistency
+  - re-observe O1 and O2 under the declared test conditions
+
+### A4 — Establish genuine independent corroboration
+
+advances: [O1]
+serves: [corroborated, distributed]
+state: waiting-third-party
+needs: [human, third-party]
+why: the claimed small-team fit currently exists only as self-description
+done_when:
+  - an appropriate independent source publishes a decision-relevant fact from its own evidence or experience
+  - no incentive, scripting, or editorial control compromises independence
+verify:
+  - inspect the source and its provenance
+  - confirm the public claim is no stronger than the source supports
+
+### A5 — Complete the QF1 observation baseline
+
+advances: [O1, O2, O3]
+serves: [observed]
 state: ready
-needs: agent
-why: the buyer's pre-brand question has nowhere to land
+needs: [agent]
+why: one answer under one condition cannot establish a stable output pattern
 done_when:
-  - the page answers the question in de-DE with explicit fit boundaries and limits
-  - the answer still makes sense quoted on its own, away from the page
-  - it's linked internally and in the sitemap
+  - QF1 and non-fit questions are observed across the declared providers, modes, and repeated fresh sessions
+  - every run retains date, locale, context, position, representation, fit, stated reasons, and evidence reference
 verify:
-  - refetch as raw HTML; ask the pre-brand question again across providers
-
-### Publish the onboarding-time methodology
-serves: evidenced
-state: ready
-needs: human
-why: the 40% claim is a primary buying reason; unsupported, it's a liability the moment an assistant repeats it
-done_when:
-  - a public methodology page with sample, method and limitations
-  - the site's claim wording matches the evidence
-verify:
-  - refetch the page; compare the public claim against the retained study
-note: the agent may build the page and draft the wording — Acme decides whether the claim is true enough to publish
-
-### Establish genuine review presence
-serves: corroborated
-state: waiting on someone else
-needs: human
-why: assistants cross-check what a business says about itself; nothing independent exists yet
-done_when:
-  - an accurate profile live on at least one platform German buyers use
-  - first uncompensated reviews present, with the process documented
-verify:
-  - refetch the profile; confirm no incentive is attached to leaving a review
-
-### Finish the assistant probes
-serves: observed
-state: ready
-needs: agent
-why: one answer on one day is an anecdote; the Outcomes need a real baseline
-done_when:
-  - the buyer questions asked across providers, repeated, each run dated with provider and locale
-verify:
-  - re-run after the answering and evidenced work ships; compare
+  - repeat the protocol after A1–A4 materially change the public corpus
+  - compare whether the Outcomes moved and whether the changed reasons are supportable
 
 ## Maintenance
 
-- re-check when: the site or the German market changes materially, or 30 days elapse
-- re-verify done actions before trusting them again — the CDN rule especially, it can be reverted by any infra change
-- keep superseded versions; never silently rewrite history
+- Re-read the current Standard whenever work resumes.
+- Re-check when the offer, public corpus, or German market changes materially, or after 30 days.
+- Re-verify done Actions before relying on them again.
+- Revisit inferred Scope premises when new buyer or market evidence appears.
+- Keep raw observations outside this file under stable evidence references.

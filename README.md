@@ -1,195 +1,248 @@
 # The Answerworthy Standard
 
-**What to do to be understood, trusted and recommended by AI — and how to put an agent to work on it.**
+**What must be true for a business to be a defensible answer to a prospective customer's question — and how an agent can start from almost any business material.**
 
-SEO makes you findable. GEO makes you citable. **Answerworthy is the work that makes you choosable.**
+SEO makes you findable. GEO makes you citable. **Answerworthy makes you choosable for the right buyer, for reasons the evidence supports.**
 
-Eight conditions decide whether an answering system can recommend a business. This standard names them, tells you how to check each one honestly, and defines `answerworthy.md` — the file where your agent records where you stand and what to do next.
+This repository is the working draft of Answerworthy 1.0.
 
-Canonical: [answerworthy.md](https://answerworthy.md) · Source: [github.com/answerworthy/answerworthy.md](https://github.com/answerworthy/answerworthy.md)
+## Quick start
 
----
+Paste this into any capable AI agent:
 
-## Why
-
-AI visibility should be a capability you own, not a subscription you rent. The work that makes a business recommendable — real buyer questions, public evidence, independent corroboration, distribution — used to need five specialists. Agents make it reachable for small teams. This standard makes it portable: your questions, findings, decisions and history live in one file you keep.
-
-It does not tell AI what to believe about you. It tells your agent how to build the public reasons that make trust defensible.
-
-Any business, any language, any geography.
-
-## Start
-
-Paste this into Claude Code, Cursor, Codex, ChatGPT, or any capable agent. Fill the three lines at the top.
-
-```
-Read the Answerworthy Standard:
-https://raw.githubusercontent.com/answerworthy/answerworthy.md/main/README.md
-
-My business: <name> · <website> · <priority market and language>
-My buyers: <who they are, and the situation they're in before they know my name>
-What you may change: <nothing yet, propose only | the site files I've given you | my CMS>
-
-Then:
-
-1. INSPECT the eight conditions against my actual public presence: the site as
-   raw HTML, whether AI crawlers really get in, what independent sources say
-   about me, and what assistants say right now when asked my buyers' questions.
-   Anything you cannot reach, record as unreached — never guess it.
-2. WRITE answerworthy.md: where I stand on each of the eight conditions, with
-   the evidence you actually saw, and the ordered work to close the gaps.
-3. FIX only what I authorised above. One change at a time. Tell me what you
-   changed and why, in plain language.
-4. STOP at two lines: any claim about my business, and anything a third party
-   would receive. Draft them for me; never assert or send them yourself.
-5. RE-VERIFY by refetching what you changed, then update the file.
-
-No score. Show me what changed and what is left.
+```text
+Get started with https://answerworthy.md
 ```
 
-Keep `answerworthy.md` wherever your working files live — a repo, a shared drive, a docs folder. If you have version control, use it. Every future session starts by reading it.
+That's it. If no business source is already available, the agent asks for one. A source may be a website, deck, presentation, document, PDF, product page, profile, repository, or similar.
 
-## The eight conditions
+## What Answerworthy means
 
-In order. Each one gates the ones below it: there is no point earning press if an assistant cannot read your site.
+A business is **Answerworthy within a declared scope** when its public decision corpus gives a capable answering system accessible, consistent, and verifiable grounds to decide whether the business is a defensible fit for a prospective customer's question — including clear grounds not to choose it when the fit is wrong.
 
-**1 · Reachable** — *Can an answering system actually fetch and read you?*
-Content present in raw HTML without JavaScript. AI crawlers genuinely allowed — check the CDN and bot-protection rules, not just `robots.txt`. Indexable, reasonably fast, accessible. Most failures here are invisible from the browser and silent.
+The unit is contextual:
 
-**2 · Identified** — *Does it know who you are, without contradiction?*
-One clear entity: name, aliases, people, products, relationships. The same facts on your site and on every profile that mentions you. Contradictions across sources are worse than silence.
+> **business × buyer-question family × market × language × constraints × time**
 
-**3 · Understood** — *Does it know what you sell, to whom, and on what terms?*
-Audience, problem, offer, commercial shape, price posture, what you are *not* for. Stated in the buyer's words, not in invented-category language.
+The **public decision corpus** is all public information from which a system can identify, understand, compare, and justify a decision about the business: owned pages and data, public profiles and documentation, marketplaces, reviews, publications, case studies, directories, and other relevant external sources.
 
-**4 · Answering** — *Do you answer the questions buyers ask before they know your name?*
-The fuzzy, pre-brand questions: "which option works for a small regulated team?" — not "is Acme any good?". Each commercial page should own a real question family. Answers must be self-contained enough to survive being quoted out of context.
+A private deck, document, or conversation can inform the work. It does not become public evidence merely because an agent has read it.
 
-**5 · Evidenced** — *Can your consequential claims be checked?*
-Every claim that would move a decision needs a method, a dated sample, its scope and its limits, at a source someone can open. A claim without evidence is a liability the moment an assistant repeats it.
+The corpus is **sufficient within scope** when no material decision fact or established buyer-question family remains absent, vague, contradictory, unsupported, or stripped of its context. A fact or question is material when it could change fit, comparative choice, terms, risk, or the buyer's next action.
 
-**6 · Corroborated** — *Does anyone independent back you up?*
-Reviews on platforms your buyers use, directories, marketplaces, institutional and expert references. This is the part you cannot self-publish, which is exactly why it carries weight.
+An exact query is a test or language sample. A **question family** is the coverage unit: several phrasings may express the same underlying buying decision. The Standard does not require one page per query.
 
-**7 · Distributed** — *Is the evidence where buyers and systems encounter it?*
-Publishers, editorial, communities, partners, associations, the surfaces of your market. Evidence nobody meets does no work.
+## Compression and decision-grade expansion
 
-**8 · Observed** — *What do assistants actually say right now?*
-Ask your buyers' real questions and record what comes back, dated, with provider and locale: `primary-recommendation` · `shortlisted` · `mentioned` · `mischaracterised` · `not-found`. One answer on one day is an anecdote, not a position.
+Human-facing marketing may compress. A headline, name, or short proposition is an interface for people; it does not need to carry the whole buying case.
 
-A tool that checks conditions 1 and 8 is doing useful work on two of eight. The chain is the point.
+Every consequential meaning it compresses must resolve through the public decision corpus into decision-grade expansion: the precise offer, fit and non-fit, terms, constraints, alternatives, evidence, and limits needed for the buyer situation.
 
-## The file
+Do not make concise marketing verbose merely to satisfy the Standard. Preserve useful compression and create or connect the missing expansion. The expansion must clarify, not materially revise, the impression created by the compression.
 
-Six sections, fixed order. It is a working document — it records your gaps, your unsupported claims and your competitors, so treat it like any internal file.
+## The business-owned file
+
+`answerworthy.md` is the business-owned, portable answerability plan defined by this Standard.
+
+The clean starter and a mature business guide are the same artifact at different stages. The file begins almost empty, then grows only with information about that business:
+
+- sources;
+- scope and its provenance;
+- buyer Outcomes;
+- observed State and evidence;
+- material next Actions;
+- maintenance information.
+
+It must not grow by copying the Standard, tutorials, raw research dumps, or implementation doctrine into every business file. The `standard:` link is part of the file itself: an agent resolves and reads the current Standard before interpreting or continuing the file.
+
+The fixed section order is:
 
 ```markdown
 ---
-answerworthy: "1.0"
-subject: "Acme GmbH"
-website: https://acme.example/
-market: "Germany · de-DE"
-audited: 2026-08-06
-refresh_days: 30
+answerworthy: "1.0-draft"
+standard: "https://raw.githubusercontent.com/kosmopteros/answerworthy.md/main/README.md"
 ---
 
-## Outcomes     ← what buyers must be able to conclude. The agent's goal.
-## Scope        ← who you're for, which alternatives, honest exclusions.
-## Rules        ← the honesty core. Copy verbatim.
-## State        ← where you stand on the eight conditions, with evidence.
-## Actions      ← the ordered work to close the gaps.
-## Maintenance  ← how this stays true.
+## Sources
+## Scope
+## Outcomes
+## State
+## Actions
+## Maintenance
 ```
 
-**Outcomes** lead, in buyer language and falsifiable: *"When a small regulated team asks an assistant which option works for them, Acme is a candidate it can defensibly recommend, with inspectable evidence for every claim it would repeat."* Not "rank #1", not "score 90".
+Large research sets, assistant transcripts, and raw evidence may live elsewhere and be linked from the file. The file keeps the conclusion and enough provenance to continue the work.
 
-**State** records one entry per condition you checked:
+## Runtime contract
 
-```
-### Homepage onboarding claim
+When an agent is asked to apply this Standard, it must:
+
+1. **Read the current Standard** before acting. If an existing `answerworthy.md` contains `standard:`, resolve that living reference.
+2. **Treat `Get started with <Standard URL>` as a complete zero-input invocation.** If no business source is available, ask exactly one question in the user's language, equivalent to: “Send one useful source about the business — a website URL, an attached deck, document or PDF, a profile or repository, or a short description.” Do not require a website and do not ask the owner to fill Scope.
+3. **Find and continue an existing `answerworthy.md`** when one is available. Do not reconstruct the work from zero.
+4. **Otherwise create the business file** with the six sections defined above. The user does not need to download, copy, or fill the starter first. If the environment cannot persist files, return the complete `answerworthy.md` as a named Markdown artifact.
+5. **Use and inspect available business material before asking anything further.** Inputs may be public or private and may include URLs, decks, presentations, documents, PDFs, profiles, product pages, repositories, descriptions, or equivalent sources.
+6. **Bootstrap Scope when it is unknown.** Discover candidate buyer situations, question families, markets, languages, alternatives, decision criteria, constraints, and non-fit from the available material and relevant research.
+7. **Preserve provenance.** Every material Scope premise remains labelled `supplied`, `observed`, `researched`, or `inferred`.
+8. **Define one to four falsifiable Outcomes** from the best-supported Scope. Include correct fit and material non-fit; Outcomes are buyer decisions, not rankings, scores, or content tasks.
+9. **Inspect the relevant public decision corpus** against the eight conditions. Anything not reached remains `unreached`; anything outside a declared bounded task remains `uncovered`.
+10. **Work backwards from the Outcomes.** If the missing thing is business reality, a decision, or evidence, make that the Action before publication. Do not turn every gap into copy or website work.
+11. **Update the file with business-specific State and Actions only.** Create an Action only when it advances an Outcome, removes a material blocker, or verifies the result.
+12. **Act only within permission.** Stop for human approval before publishing a new or materially changed consequential claim or sending/submitting anything directly to a third party.
+13. **Re-verify changed public State**, update the file, and stop when no material ready Action remains within the granted permission.
+
+Inspect before asking. Ask the human only when an unresolved fact cannot be established from available evidence and its answer would change Scope, an Outcome, or the next material Action.
+
+## Scope provenance
+
+Use these provenance values for material buyer situations, question families, alternatives, criteria, constraints, and non-fit:
+
+- **`supplied`** — stated by the business, operator, or supplied material. It may establish a business-side fact, but it does not by itself establish public visibility or market demand.
+- **`observed`** — directly present in retained buyer, customer, market, or public evidence.
+- **`researched`** — supported by credible external research rather than direct observation in the inspected business context.
+- **`inferred`** — a working hypothesis derived from available material.
+
+Inference is useful for deciding what to investigate next. It is not evidence of demand or fact, and repetition does not upgrade it.
+
+Mark Sources as public or private. Private evidence may support Scope or a human decision, but it cannot satisfy a public-corpus condition until the relevant information becomes publicly inspectable.
+
+## The eight conditions
+
+The conditions form a dependency network, not a score and not a universal implementation order.
+
+### 1 · Reachable
+
+**Can the relevant systems and buyers access the decision-useful information?**
+
+Required facts and evidence must be available through the surfaces, formats, and access conditions relevant to the declared scope. Current checks may include rendered or raw HTML, crawler access, bot protection, structured data, feeds, profiles, marketplaces, or other retrieval paths; these are implementation techniques, not universal requirements.
+
+### 2 · Identified
+
+**Can the business be resolved as one consistent entity?**
+
+Names, aliases, people, products, locations, and relationships must be unambiguous and materially consistent across the corpus. Unknown is better than a silent contradiction.
+
+### 3 · Understood
+
+**Is the offer and comparative fit explicit?**
+
+The corpus must state what is offered, to whom, where, on what terms, under which constraints, and where the business is a strong or weak fit against relevant alternatives. Use the buyer's decision language rather than invented-category language alone. Concise marketing may remain concise; its consequential meaning must resolve into precise public detail.
+
+### 4 · Answering
+
+**Does the corpus answer the material questions buyers use before they know the business's name?**
+
+Coverage follows question families in the declared market and language, including local terminology and materially different constraints. Answers must contain decision-useful distinctions and remain intelligible when encountered away from their original page. Coverage belongs to the corpus as a whole; no single page must carry the entire explanation.
+
+### 5 · Evidenced
+
+**Can every consequential reason for choosing or rejecting the business be checked?**
+
+A reason that could change the decision must resolve to evidence with the provenance, scope, freshness, method, and limitations necessary for that kind of claim. Unsupported material remains explicitly unsupported.
+
+### 6 · Corroborated
+
+**Which material facts survive beyond the business's own assertion?**
+
+Independent sources must establish the facts for which self-publication is insufficient. A third-party page that merely repeats the business's wording is not independent corroboration of the underlying claim.
+
+### 7 · Distributed
+
+**Are the answers and evidence present where this market encounters them?**
+
+Decision-useful information must exist on the owned and external surfaces that buyers and systems in the declared scope are reasonably likely to use. Evidence placed where nobody relevant encounters it does no work.
+
+### 8 · Observed
+
+**What do particular answering systems say under documented conditions?**
+
+Record the exact buyer question, provider or model where available, mode, date, locale, relevant context, position, representation quality, buyer fit, stated reasons, and whether those reasons are supported by the inspected corpus. One run is an observation, not a stable position. A system's stated reason is not access to its hidden retrieval, ranking, training influence, or internal reasoning.
+
+With full coverage, Observed is the integration test: does a current system choose or reject the business for the right buyer, in the right context, for reasons the public corpus can support?
+
+## File semantics
+
+### Sources
+
+List the material inputs and evidence references needed to continue the work. Mark each as public or private and record the inspection date when freshness matters.
+
+### Scope
+
+Record the buyer situations, question families, market, language, alternatives, criteria, constraints, non-fit, and bounded coverage. Keep provenance visible for every material premise.
+
+### Outcomes
+
+Use stable IDs such as `O1`. An Outcome describes a buyer decision that should become defensible:
+
+> **O1 —** When a small regulated team compares analytics tools, an answering system can correctly determine whether Acme is a defensible fit over the relevant alternatives and support every consequential stated reason from the public corpus.
+
+Include a non-fit Outcome when recommending the business outside its real fit would be materially wrong.
+
+### State
+
+Use stable IDs such as `S1`. Each material finding records one condition and one state:
+
+`verified` · `unsupported` · `contradicted` · `missing` · `unreached` · `stale` · `incomplete`
+
+```markdown
+### S1 — Homepage onboarding claim
+
 condition: evidenced
 state: unsupported
 claim: "Reduces onboarding time by 40%"
 evidence:
-  - claim visible at https://acme.example/product — retrieved 2026-08-06
+  - claim visible at https://acme.example/product — inspected 2026-08-14
 needed:
-  - reproducible methodology with dated sample and limitations
-  - independent corroboration
+  - evidence appropriate to this timing claim: baseline, method, scope, date, limits, and exceptions
 ```
 
-Conditions: `reachable` · `identified` · `understood` · `answering` · `evidenced` · `corroborated` · `distributed` · `observed`.
+`verified` requires current evidence another person could inspect. For Observed findings, retain the test conditions and stated reasons, or link to a supporting observation log.
 
-States: `verified` · `unsupported` · `contradicted` · `missing` · `unreached` · `stale` · `incomplete`. `verified` needs current evidence someone else could open. `unreached` is what you write when you could not check — never a zero, never a guess.
+### Actions
 
-**Actions** say what to do, what done looks like, and how to re-check:
+Use stable IDs such as `A1`.
 
-```
-### Publish the onboarding-time methodology
-serves: evidenced
-state: ready
-needs: human
-why: the 40% claim is a primary buying reason; unsupported, it is a liability
+An Action is the smallest material change required to make a buyer-relevant conclusion true, supportable, public, discoverable, or correctly observable. It may require business clarification, evidence generation, product or service work, publication, independent corroboration, distribution, technical access, or verification. Do not choose a writing task when the underlying fact or evidence does not yet exist.
+
+```markdown
+### A1 — Resolve the onboarding-time claim
+
+advances: [O1]
+serves: [evidenced]
+state: waiting-human
+needs: [human]
+why: the claim can change the buying decision and is currently unsupported
 done_when:
-  - public methodology page with sample, method and limitations
-  - the site's claim wording matches the evidence
+  - the claim is removed, or public evidence supports wording no stronger than the evidence
 verify:
-  - refetch the page; compare the claim against the retained study
+  - refetch the claim and evidence
+  - repeat the affected buyer question and inspect the stated reasons
 ```
 
-Action states: `ready` · `blocked` · `waiting on someone else` · `done`. `needs:` is `agent` or `human` — human for any claim, and anything a third party receives.
+Action states:
+
+`ready` · `blocked` · `waiting-human` · `waiting-third-party` · `done`
+
+`needs:` may include `agent`, `human`, or `third-party`.
+
+### Maintenance
+
+Re-read the current Standard whenever work resumes. Re-check when the offer, corpus, market, or evidence changes materially; re-verify completed Actions before relying on them again; preserve superseded history when useful; and remove stale instructions that no longer describe the business.
 
 ## Rules
 
-Copy these into every file, verbatim.
-
-1. **Claims are objects under evaluation.** A claim appears here only with an evidence state. Writing it down makes nothing true.
-2. **No evidence, no evaluated claim.** Cite what was observed, name what's needed, or both.
-3. **Unreached is not zero.** Blocked, absent or failed observation is recorded as exactly that — never as a failure, a zero, or invented certainty.
-4. **No fabrication, no strengthening.** Never invent sources, dates, quotes, reviews or results. Never restate an unsupported claim as established. Inferred buyer questions stay labelled inferred and never count as demand.
-5. **Earned means earned.** No fake or incentivised reviews, no astroturfing, no self-review posing as independence, no bot-wall bypass. Links and mentions are outcomes of relevance, never quotas.
-6. **Two things always need a human.** Any claim about the business, and anything a third party would receive. An agent may draft both; it may assert or send neither.
-7. **Numbers carry their coverage.** Any figure states how much it actually saw. Never blend different questions into one headline number. The output is the work, not a grade.
-
-## What your agent may change
-
-Not a permission system — a boundary. You tell it what it can touch; these two lines hold regardless.
-
-| | |
-|---|---|
-| **Your own surfaces** | Pages, answers, markup, access config, internal links, discovery files — whatever access you granted. Change one thing at a time and say what changed. |
-| **Claims** | Always human. The agent may build the page that would carry a claim and draft the wording; you decide whether it is true enough to publish. |
-| **Third parties** | Always human. Reviews, outreach, PR, partnerships, profiles you must own — drafted by the agent, sent by you. |
-
-If your site deploys automatically, the agent proposes changes for your review before they go live.
-
-## Why this isn't a scanner
-
-| Scanner | Answerworthy |
-|---|---|
-| Returns a score | Returns changed pages and an ordered queue |
-| Your website | Eight conditions, including what you cannot self-publish |
-| Your brand name in prompts | The buyer's question *before* they know your brand |
-| A dashboard you revisit | A file you keep, that agents continue from |
-| One blended number | Separate findings, each with its evidence |
-
-Tools that check one condition are useful. This is the chain.
-
-## Conformance
-
-A file is **declared** when it has valid frontmatter and all six sections; **evidenced** when every entry in State has a state and an evidence basis and the Rules are followed; **maintained** when the audit date is fresh, completed actions are re-verified, and history is kept.
-
-Anyone may implement this — agents, tools, agencies, the business itself. No service owns implementation, including the author's. Implementations should say which of the eight conditions they actually cover. Partial coverage is normal and welcome; presenting one condition as the whole chain is not.
-
-Following this standard structures evidence and closes gaps. It does not guarantee ranking, citation, recommendation or revenue.
+1. **Scope premises retain provenance.** Unknown is valid. `inferred` may guide discovery but never silently becomes observed demand or established fact.
+2. **Compression must resolve into explanation.** Preserve useful human-facing compression. Every consequential meaning it carries must unfold into public decision-grade detail, and the expansion must not materially revise the impression created by the compression.
+3. **Claims remain under evaluation.** Writing a claim in the file or corpus makes nothing true. Consequential claims require evidence appropriate to their kind.
+4. **No fabrication or strengthening.** Never invent sources, dates, quotes, reviews, results, demand, or certainty. `unreached` is not failure, zero, or permission to guess.
+5. **Independence must be real.** No fake or incentivised reviews, astroturfing, self-review posing as independence, or access-control bypass. External repetition is not automatically corroboration.
+6. **Measurements are evidence, not objectives.** Counts, scores, positions, and checks may show where to investigate. No change is made merely to improve them.
+7. **Observation is not hidden causality.** Record what a system said and the conditions under which it said it. Do not claim access to hidden model processes without direct evidence.
+8. **Questions must earn interruption.** Ask the human only to resolve a material uncertainty that cannot be established otherwise and that changes Scope, an Outcome, or the next Action.
+9. **Human authority remains where consequences leave the system.** A human approves new or materially changed consequential claims and direct third-party messages, submissions, outreach, reviews, PR, or partnership communication.
 
 ## License
 
-Text CC BY 4.0 · template and example CC0 — copy them freely.
+Standard text: CC BY 4.0. Starter and example: CC0 1.0.
 
-Created and stewarded by Alexander Pichugin. Changes by pull request in the open.
-
----
-
-**Next:** copy [`template/answerworthy.md`](./template/answerworthy.md), or see [`examples/acme/answerworthy.md`](./examples/acme/answerworthy.md).
-
-*The standard is free. Becoming the answer is the work.*
+Created and stewarded by Alexander Pichugin. Changes by pull request.
