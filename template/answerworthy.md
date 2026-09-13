@@ -1,6 +1,6 @@
 ---
 answerworthy: "1.0-draft"
-standard: "https://raw.githubusercontent.com/kosmopteros/answerworthy.md/main/README.md"
+standard: "https://raw.githubusercontent.com/answerworthy/answerworthy.md/main/README.md"
 ---
 
 ## Sources
@@ -9,7 +9,7 @@ None yet.
 
 ## Scope
 
-Unknown.
+Unknown. Record the commercial objective if available, source provenance, coverage, and permission as the work establishes them.
 
 ## Outcomes
 
@@ -26,4 +26,4 @@ Not assessed.
 ## Maintenance
 
 - Re-read the current Standard whenever work resumes.
-- Keep only business-specific sources, scope, Outcomes, evidence-grounded State, unresolved material questions, and next Actions here.
+- Keep only business-specific sources, scope, Outcomes, evidence-grounded State, and useful Actions here. Link prepared work so another agent can continue it.

@@ -1,229 +1,103 @@
 ---
 answerworthy: "1.0-draft"
-standard: "https://raw.githubusercontent.com/kosmopteros/answerworthy.md/main/README.md"
-subject: "Acme Analytics GmbH"
-website: "https://acme.example/"
-updated: 2026-08-14
+standard: "https://raw.githubusercontent.com/answerworthy/answerworthy.md/main/README.md"
+subject: "Acme Cycle Workshop"
+updated: 2026-09-13
 ---
 
 ## Sources
 
-- `https://acme.example/` — public; homepage, product, pricing, and documentation inspected 2026-08-14
-- `Acme-sales-deck.pdf` — private; supplied by Acme and inspected 2026-08-14
-- `https://reviews.example/acme` — public; inspected 2026-08-14
-- `OBS-QF1-2026-08-14` — private observation log containing retained assistant outputs
+- [Business fixture](./business-fixture.md) — public example material. F1–F3 represent Acme's existing public homepage, service page, and booking page; F4 is its supplied owner brief. All are fictional, written for this example and inspected as local text on 2026-09-13. These are not fetched pages or evidence of a real business, buyer demand, assistant answers, or sales.
+- [Prepared commuter repair guide](./commuter-repair-guide.md) — public example artifact, proposed business material. Its source map and placement are included. It has not been published to an Acme business website.
 
 ## Scope
 
-- coverage: full
-- market: Germany
-- language: de-DE
-- buyers: small regulated teams choosing analytics software without a dedicated compliance specialist
-  - provenance: researched
-- alternatives:
-  - BigDash — provenance: observed
-  - MetricsCo — provenance: researched
-- non-fit: enterprises requiring governance controls Acme does not provide
-  - provenance: supplied
+- objective: increase suitable bookings for the £60 commuter service using the existing offer and material, without advertising spend — supplied, F4.
+- market and language: Manchester, UK; en-GB — supplied, F4.
+- buyers: local people who commute on conventional bicycles and can leave a bicycle for a weekday appointment — supplied, F2 and F4. The size and demand of this segment have not been researched.
+- alternatives: make the simple pre-booking checks in F3, book Acme's commuter service, or arrange a separate repair assessment; motor or battery faults require an e-bike specialist — supplied, F2–F3. No named competitors have been investigated.
+- constraints and non-fit: £60 covers labour for the listed service, parts cost extra with prior approval, no motor or battery repairs, and no promise of completion on the day — supplied, F2–F3.
+- coverage: [understood, answering, evidenced]. Inspection is of the included fixture only. Reachable, identified, corroborated, distributed, and observed are uncovered; no live access or market tests were attempted.
+- permission: research the supplied material and prepare a guide and proposed placement. The owner controls website publication and must approve the prepared guide and placement first — supplied, F4.
 
-### QF1 — choose analytics software for a small regulated team without dedicated compliance staff
+### QF1 — Which appointment suits my commuter bicycle?
 
-- decision: select an analytics product the team can deploy and govern with limited internal compliance expertise
-- provenance: researched
-- query variants:
-  - "Welche Analytics-Lösung eignet sich für ein kleines reguliertes Team ohne Compliance-Spezialisten?" — provenance: researched
-  - "einfache datenschutzkonforme Analytics für kleines Team" — provenance: inferred
-- material criteria:
-  - supported controls and regulatory context — provenance: researched
-  - deployment and onboarding effort — provenance: supplied
-  - team size and expertise required — provenance: researched
-  - pricing and contractual commitment — provenance: observed
-  - limitations against enterprise alternatives — provenance: inferred
+- decision: distinguish a routine service from a specific repair assessment or an e-bike specialist appointment — supplied, F2–F4.
+- example question: “My commuter bike has noisy gears. Should I book a service or a repair?” — inferred wording, not an observed search or customer quotation.
+- material criteria: work included, labour price and parts approval, symptoms to describe, transport and timing constraints, and repair exclusions — supplied, F2–F3.
+- opportunity: adapt the existing answers into a short guide organised around that decision and link it near the service booking action — inferred recommendation. The current service page already gives the relevant facts. The expected benefit is easier appointment selection at the point of booking; that effect has not been measured.
 
 ## Outcomes
 
-- **O1 — QF1:** An answering system can correctly determine whether Acme is a defensible fit over BigDash and MetricsCo for a small regulated German team, and support every consequential stated reason from the public corpus.
-- **O2 — QF1:** When a buyer requires enterprise governance controls Acme does not provide, an answering system does not present Acme as the better fit.
-- **O3 — QF1:** If an answering system mentions Acme's onboarding-time advantage, it states the supported scope and limits rather than repeating "40%" as a universal fact.
+- **O1 — QF1:** A Manchester commuter or answering system can determine when Acme's £60 service is an appropriate appointment, distinguish it from a separate repair assessment, and support the recommendation with the listed work, parts terms, and timing limits.
+- **O2 — QF1:** A buyer with a motor or battery fault, or a need for guaranteed same-day completion, can identify that Acme's commuter service does not meet that requirement.
 
 ## State
 
-### S1 — Access to decision-useful commercial information
-
-condition: reachable
-state: verified
-evidence:
-  - homepage, product, pricing, and documentation were reachable without an access challenge through the declared Web test paths — verified 2026-08-14
-  - decision-useful product and pricing information was present in the fetched content — verified 2026-08-14
-
-### S2 — Company identity across public profiles
-
-condition: identified
-state: incomplete
-evidence:
-  - website and review profile use the same company and product names — checked 2026-08-14
-  - two other known profiles require account access unavailable to this assessment
-needed:
-  - inspect the remaining profiles for legal entity, product, and location consistency
-
-### S3 — Comparative fit behind the homepage compression
+### S1 — Service fit and limits are already explicit
 
 condition: understood
-state: incomplete
-compression: "compliance without complexity"
+state: verified
 evidence:
-  - the phrase is a useful concise proposition for people, but no public decision-grade expansion states which controls, workflows, team sizes, or trade-offs make Acme a stronger fit than BigDash or MetricsCo
-  - the private deck states that Acme is not intended for enterprise governance, but this boundary is absent from the public corpus
-needed:
-  - Acme-validated fit, trade-offs, constraints, and non-fit against both alternatives
-  - a public expansion that preserves rather than materially revises the impression created by "compliance without complexity"
-  - public wording supported by evidence
+  - F2 names the commuter service, included work, labour price, approval for extra parts, and e-bike exclusions; F3 states the timing limit and separate assessment route.
+  - verified against the included fictional source text on 2026-09-13; no live business site was assessed.
+needed: []
 
-### S4 — QF1 coverage in de-DE
+### S2 — Existing service and booking material answers QF1
 
 condition: answering
-state: missing
+state: verified
 evidence:
-  - no inspected de-DE surface answers QF1 across the material criteria — checked 2026-08-14
-needed:
-  - decision-useful QF1 coverage using validated fit, terms, trade-offs, and limits
-  - a discoverable route from relevant commercial pages
+  - F2 distinguishes routine adjustment from persistent faults and damage; F3 explains what to check, what to describe, and how to choose an appointment.
+  - the proposed guide reuses these answers in a single decision sequence; it does not establish that current buyers fail to find them.
+needed: []
 
-### S5 — Homepage onboarding claim
+### S3 — Offer statements have an inspectable source basis
 
 condition: evidenced
-state: unsupported
-claim: "Reduces onboarding time by 40%"
+state: verified
 evidence:
-  - claim visible at https://acme.example/product — inspected 2026-08-14
-  - the private deck repeats the figure but contains no method, baseline, sample, or limits
-needed:
-  - evidence appropriate to a comparative timing claim: baseline, method, sample, scope, date, limits, and exceptions
-  - public wording no stronger than the retained evidence
-
-### S6 — Independent support for small-team fit
-
-condition: corroborated
-state: missing
-evidence:
-  - the public review profile contains two ratings but no decision-relevant text about regulated small-team fit
-  - two partner pages repeat Acme's product copy without independent observation
-needed:
-  - an independent source that establishes a decision-relevant fact from its own evidence or experience
-
-### S7 — Decision evidence across relevant German surfaces
-
-condition: distributed
-state: incomplete
-evidence:
-  - Acme is present on one review platform and two partner sites
-  - none of those surfaces carries evidence about QF1 fit, onboarding, or non-fit
-needed:
-  - validated decision-useful information on surfaces buyers in this scope actually use
-
-### S8 — QF1 assistant observation
-
-condition: observed
-state: incomplete
-query: "Welche Analytics-Lösung eignet sich für ein kleines reguliertes Team ohne Compliance-Spezialisten?"
-provider: "<retained in observation log>"
-model: unreached
-mode: search-enabled
-observed_at: 2026-08-14T14:00:00+02:00
-locale: de-DE
-context: "fresh session; Germany; no account personalisation; no preceding conversation"
-runs: 1
-position: mentioned
-representation: incomplete
-fit: uncertain
-stated_reasons:
-  - "Acme may suit smaller teams because it is simpler to deploy."
-reason_support: unsupported
-evidence_ref:
-  - `OBS-QF1-2026-08-14`
-needed:
-  - repeated observations under declared conditions
-  - comparison of each stated reason against the inspected public corpus
+  - F2–F3 are the fixture's own published service terms, adequate here for the limited claims about what the business offers and charges.
+  - no claim of faster repairs, better performance, independent endorsement, or improved conversion is made. Such claims would need different evidence.
+needed: []
 
 ## Actions
 
-### A1 — Validate Acme's QF1 fit and non-fit
-
-advances: [O1, O2]
-serves: [understood, evidenced]
-state: waiting-human
-needs: [human]
-why: the public corpus cannot support a correct comparative decision until Acme validates which differences matter and where they stop applying
-done_when:
-  - decision-relevant differences, trade-offs, constraints, and exclusions are documented against BigDash and MetricsCo
-  - each consequential distinction has evidence or remains explicitly unsupported
-  - Acme approves the business-side facts and boundaries
-verify:
-  - compare every approved statement with retained evidence
-  - test whether the same facts support O1 and reject Acme under O2
-
-### A2 — Resolve the onboarding-time claim
-
-advances: [O3]
-serves: [evidenced]
-state: waiting-human
-needs: [human]
-why: "40%" can change a buying decision and is currently unsupported
-done_when:
-  - Acme publishes sufficient evidence, narrows the claim to what the evidence supports, or removes it
-verify:
-  - refetch the claim and evidence
-  - repeat the affected QF1 observation and inspect the stated reasons
-
-### A3 — Create the decision-grade QF1 expansion in de-DE
+### A1 — Prepare the commuter appointment guide from existing answers
 
 advances: [O1, O2]
 serves: [understood, answering, evidenced]
-state: blocked
-needs: [agent, human]
-why: the concise proposition may remain concise; the missing work is a public explanation of the fit, terms, trade-offs, and limits, but publishing before A1 and A2 would make unsupported positioning more legible
+state: done
+needs: []
+why: the owner wants more suitable commuter-service bookings. A short decision guide can help visitors choose an appointment using Acme's existing strengths and terms; it is a bounded opportunity to support that objective, not a correction to a failed condition.
+prepared: [commuter-repair-guide.md](./commuter-repair-guide.md)
 done_when:
-  - the public corpus covers QF1 using approved distinctions, terms, trade-offs, and limits
-  - the expansion preserves rather than materially revises the impression created by the concise proposition
-  - the explanation remains intelligible when encountered away from its original page
-  - relevant commercial pages provide a discoverable route to it without becoming unnecessarily verbose
+  - the guide provides usable decision copy, a booking action, proposed placement, and a source map without requiring another writer to produce it.
 verify:
-  - refetch the published material
-  - compare the compression with the expanded explanation for consistency
-  - re-observe O1 and O2 under the declared test conditions
+  - checked every offer statement against F2–F3; the £60 labour boundary, extra-parts approval, separate assessment, timing, and e-bike exclusions are preserved.
+  - checked that the guide supports both O1 and O2 and leaves F1's concise headline intact.
+result: preparation complete; no public business change or commercial result observed.
+missing_inputs: []
 
-### A4 — Establish genuine independent corroboration
+### A2 — Owner reviews the guide and its booking-page placement
 
-advances: [O1]
-serves: [corroborated, distributed]
-state: waiting-third-party
-needs: [human, third-party]
-why: the claimed small-team fit currently exists only as self-description
+advances: [O1, O2]
+serves: [understood, answering, evidenced]
+state: waiting-human
+needs: [human]
+why: the guide and placement are ready; the owner reserved publication approval in F4.
+next: the owner approves the exact guide text and proposed service-page link in the prepared artifact, or identifies a specific change.
+depends_on: [owner publication approval]
+missing_inputs: []
 done_when:
-  - an appropriate independent source publishes a decision-relevant fact from its own evidence or experience
-  - no incentive, scripting, or editorial control compromises independence
+  - the owner's decision on the guide and placement is recorded.
 verify:
-  - inspect the source and its provenance
-  - confirm the public claim is no stronger than the source supports
-
-### A5 — Complete the QF1 observation baseline
-
-advances: [O1, O2, O3]
-serves: [observed]
-state: ready
-needs: [agent]
-why: one answer under one condition cannot establish a stable output pattern
-done_when:
-  - QF1 and non-fit questions are observed across the declared providers, modes, and repeated fresh sessions
-  - every run retains date, locale, context, position, representation, fit, stated reasons, and evidence reference
-verify:
-  - repeat the protocol after A1–A4 materially change the public corpus
-  - compare whether the Outcomes moved and whether the changed reasons are supportable
+  - compare the approved text with the prepared version and re-check any changed offer statements against F2–F3.
+continuation: after approval, record a separate publication Action for the owner who controls the site, with the guide and link as its deliverables. Verify the actual page and booking route after publication before updating public State. If live retrieval cannot be performed, record it as unreached. Evaluate any booking response separately from the publication check.
 
 ## Maintenance
 
-- Re-read the current Standard whenever work resumes.
-- Re-check when the offer, public corpus, or German market changes materially, or after 30 days.
-- Re-verify done Actions before relying on them again.
-- Revisit inferred Scope premises when new buyer or market evidence appears.
-- Keep raw observations outside this file under stable evidence references.
+- Re-read the current Standard when work resumes, then read the fixture and prepared guide linked above. All materials needed for this example travel in this directory.
+- The one outstanding dependency is the owner's publication decision; no missing business fact prevents review of the prepared work.
+- Re-check the guide if the price, included work, booking options, repair exclusions, or timing terms change. Reuse its source map when updating it.
+- If the owner publishes, agree how to review subsequent commuter-service bookings and appointment corrections using available booking records. No measurement has been run and no increase is promised; counts alone would not establish that the guide caused a change.
