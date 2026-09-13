@@ -6,6 +6,10 @@ SEO makes you findable. GEO makes you citable. **Answerworthy makes you choosabl
 
 This repository is the working draft of Answerworthy 1.0.
 
+Canonical public gateway: [answerworthy.md](https://answerworthy.md) · Canonical source: [answerworthy/answerworthy.md](https://github.com/answerworthy/answerworthy.md).
+
+Use it with any capable agent or practitioner to investigate, choose useful work, prepare it, carry out authorised changes, and continue from the file you keep. No paid account or private material is required to use the Standard. A hosted service's free or paid limits apply to that service, not to independent use of this Standard.
+
 ## Quick start
 
 Paste this into any capable AI agent:
@@ -15,6 +19,8 @@ Get started with https://answerworthy.md
 ```
 
 That's it. If no business source is already available, the agent asks for one. A source may be a website, deck, presentation, document, PDF, product page, profile, repository, or similar.
+
+If you already have a commercial objective or permission to change particular material, include it. Neither is a form you must fill before work can begin. See the [empty starter](./template/answerworthy.md) or a [prepared example with all its sources](./examples/acme/answerworthy.md).
 
 ## What Answerworthy means
 
@@ -31,6 +37,22 @@ A private deck, document, or conversation can inform the work. It does not becom
 The corpus is **sufficient within scope** when no material decision fact or established buyer-question family remains absent, vague, contradictory, unsupported, or stripped of its context. A fact or question is material when it could change fit, comparative choice, terms, risk, or the buyer's next action.
 
 An exact query is a test or language sample. A **question family** is the coverage unit: several phrasings may express the same underlying buying decision. The Standard does not require one page per query.
+
+## From business objective to useful work
+
+A commercial objective gives the work direction: for example, more suitable enquiries for an existing service. Record a supplied objective in Scope; if none is supplied, derive a provisional direction from the available business material and label it `inferred`. Do not present an inferred direction as the owner's commitment.
+
+Translate that direction into buyer Outcomes: what a prospective customer or answering system should be able to discover, understand, trust, choose, or rule out. Then select work with a reasoned relationship to those Outcomes. State why the work deserves effort for this business, where it will be used, and what buyer response would indicate whether it helped.
+
+Useful work can build on an existing strength, adapt a useful asset, or reach another relevant buyer situation even when the inspected conditions are adequate. A recommendation does not need a fabricated defect or a measured effect before it can be proposed. Its factual premises need sources; its expected contribution remains a reasoned judgment until observed. Do not add work merely because an imperfection is detectable.
+
+Keep four things distinct: what the sources establish, what is recommended or prepared, what actually changed in public, and what commercial response was observed. A finished draft is useful completed preparation. It is not a published change, an achieved buyer Outcome, or evidence of more sales.
+
+## Full and bounded use
+
+All eight conditions apply to a full assessment within the declared buyer situations, markets, languages, and time. Record `coverage: full` in Scope only when all eight have been attempted and represented in State. Full coverage describes the inspection, not success: findings may remain missing, unsupported, or unreached.
+
+A bounded task may inspect a subset, such as `coverage: [understood, answering, evidenced]`. Unlisted conditions are `uncovered`: outside this inspection, with no verdict implied. A selected check that cannot be performed is `unreached`, with the access or observation limit recorded. Partial use is useful in its own right; keep its limits visible when handing off or describing the result.
 
 ## Compression and decision-grade expansion
 
@@ -60,7 +82,7 @@ The fixed section order is:
 ```markdown
 ---
 answerworthy: "1.0-draft"
-standard: "https://raw.githubusercontent.com/kosmopteros/answerworthy.md/main/README.md"
+standard: "https://raw.githubusercontent.com/answerworthy/answerworthy.md/main/README.md"
 ---
 
 ## Sources
@@ -84,12 +106,12 @@ When an agent is asked to apply this Standard, it must:
 5. **Use and inspect available business material before asking anything further.** Inputs may be public or private and may include URLs, decks, presentations, documents, PDFs, profiles, product pages, repositories, descriptions, or equivalent sources.
 6. **Bootstrap Scope when it is unknown.** Discover candidate buyer situations, question families, markets, languages, alternatives, decision criteria, constraints, and non-fit from the available material and relevant research.
 7. **Preserve provenance.** Every material Scope premise remains labelled `supplied`, `observed`, `researched`, or `inferred`.
-8. **Define one to four falsifiable Outcomes** from the best-supported Scope. Include correct fit and material non-fit; Outcomes are buyer decisions, not rankings, scores, or content tasks.
+8. **Define one to four falsifiable Outcomes** from the best-supported Scope and commercial objective where available. Include correct fit and material non-fit; Outcomes are buyer decisions, not rankings, scores, or content tasks.
 9. **Inspect the relevant public decision corpus** against the eight conditions. Anything not reached remains `unreached`; anything outside a declared bounded task remains `uncovered`.
-10. **Work backwards from the Outcomes.** If the missing thing is business reality, a decision, or evidence, make that the Action before publication. Do not turn every gap into copy or website work.
-11. **Update the file with business-specific State and Actions only.** Create an Action only when it advances an Outcome, removes a material blocker, or verifies the result.
-12. **Act only within permission.** Stop for human approval before publishing a new or materially changed consequential claim or sending/submitting anything directly to a third party.
-13. **Re-verify changed public State**, update the file, and stop when no material ready Action remains within the granted permission.
+10. **Work backwards from the Outcomes.** Investigate relevant opportunities and useful existing material as well as gaps. If the missing thing is business reality, a decision, or evidence, make that the Action before publication. Do not turn every gap into copy or website work.
+11. **Select and prepare material Actions.** Explain the relationship to an Outcome and expected commercial contribution. Use available sources to do the research, comparison, drafting, or other preparation that can be completed within the task; a generic instruction to commission the same work again is not prepared work. Keep the business file concise and link usable supporting artifacts.
+12. **Act only within permission.** Human approval is required before publishing a new or materially changed consequential claim or sending/submitting anything directly to a third party. Existing approval applies within its stated scope; drafting and investigation can proceed while a later publication step awaits approval.
+13. **Verify what was completed.** Check prepared work against its sources; re-fetch actual public changes and re-observe affected Outcomes when relevant and available. Update State and Actions, name the next operation and any genuine dependency, and stop when the bounded task is complete or no material ready Action remains within permission. A complete brief piece of work and an empty missing-input list are valid results.
 
 Inspect before asking. Ask the human only when an unresolved fact cannot be established from available evidence and its answer would change Scope, an Outcome, or the next material Action.
 
@@ -168,7 +190,7 @@ List the material inputs and evidence references needed to continue the work. Ma
 
 ### Scope
 
-Record the buyer situations, question families, market, language, alternatives, criteria, constraints, non-fit, and bounded coverage. Keep provenance visible for every material premise.
+Record the buyer situations, question families, market, language, alternatives, criteria, constraints, non-fit, and bounded coverage. Include the commercial objective when available and the permission for the current task. Keep provenance visible for every material premise.
 
 ### Outcomes
 
@@ -184,8 +206,18 @@ Use stable IDs such as `S1`. Each material finding records one condition and one
 
 `verified` · `unsupported` · `contradicted` · `missing` · `unreached` · `stale` · `incomplete`
 
+- **`verified`** — current inspectable evidence supports the stated finding within its recorded boundary; this is not a verdict on the whole business.
+- **`unsupported`** — a consequential claim is present, but inspected evidence does not establish it. Lack of support does not prove it false.
+- **`contradicted`** — inspected sources materially conflict with the claim or each other. Record both sides and what remains unresolved.
+- **`missing`** — a needed decision fact, answer, or evidence was not found within an inspected boundary. Say where you looked; do not claim absence from sources you could not inspect.
+- **`unreached`** — a selected source or check could not be accessed or performed. Record the limit, not a guessed business finding.
+- **`stale`** — previously usable evidence is no longer current enough for the conclusion; identify what requires a refresh.
+- **`incomplete`** — an inspected finding covers only part of the required question or evidence. Name the supported part and remainder; record inaccessible checks as `unreached` rather than hiding them in this label.
+
+`uncovered` describes coverage, not an adverse State finding. For example, a supplier's unavailable study is `unreached`; it does not establish that the supplier has no study. If a claim is visible but its support cannot be inspected, the claim may separately remain `unsupported` on the evidence available to this assessment.
+
 ```markdown
-### S1 — Homepage onboarding claim
+### S1 — Homepage onboarding claim (illustrative)
 
 condition: evidenced
 state: unsupported
@@ -198,32 +230,48 @@ needed:
 
 `verified` requires current evidence another person could inspect. For Observed findings, retain the test conditions and stated reasons, or link to a supporting observation log.
 
+State records findings, including adequate existing material worth reusing. Keep proposals and prepared artifacts in Actions; do not change public State merely because an agent drafted an improvement.
+
 ### Actions
 
 Use stable IDs such as `A1`.
 
-An Action is the smallest material change required to make a buyer-relevant conclusion true, supportable, public, discoverable, or correctly observable. It may require business clarification, evidence generation, product or service work, publication, independent corroboration, distribution, technical access, or verification. Do not choose a writing task when the underlying fact or evidence does not yet exist.
+An Action is a bounded piece of work that materially advances a buyer Outcome, removes a dependency, or verifies the result. It may investigate an opportunity, reuse an existing asset, clarify business facts, generate evidence, change a product or service, prepare material, publish, earn independent corroboration, distribute, improve access, or verify. Do not choose a writing task when the underlying fact or evidence does not yet exist.
+
+Order Actions by their expected contribution, prerequisites, and effort. `advances:` names Outcome IDs; `serves:` names relevant conditions within the declared coverage. An Action may extend useful coverage without repairing a failed condition. Explain that opportunity in `why:`. If the selected work requires another condition to be inspected, update Scope and inspect it rather than implying it has been assessed.
+
+Each active Action must make the next operation clear, name its actor and unmet prerequisites, define a checkable completion boundary, and explain verification. Link prepared material and its source basis so another agent can continue without reconstructing the work. A short Action can be complete when these are clear; extra fields, long briefs, or missing inputs are not required for their own sake.
 
 ```markdown
-### A1 — Resolve the onboarding-time claim
+### A1 — Obtain the missing timing study (illustrative)
 
 advances: [O1]
 serves: [evidenced]
 state: waiting-human
 needs: [human]
 why: the claim can change the buying decision and is currently unsupported
+next: the owner supplies the study behind the 40% figure, or confirms that none exists
+depends_on: [owner response]
 done_when:
-  - the claim is removed, or public evidence supports wording no stronger than the evidence
+  - the study is available for inspection, or its absence is confirmed
 verify:
-  - refetch the claim and evidence
-  - repeat the affected buyer question and inspect the stated reasons
+  - inspect any supplied study for baseline, method, scope, date, and limits
+  - select the next Action to retain, narrow, or remove the public claim based on that inspection
 ```
 
 Action states:
 
 `ready` · `blocked` · `waiting-human` · `waiting-third-party` · `done`
 
-`needs:` may include `agent`, `human`, or `third-party`.
+`needs:` may include `agent`, `human`, or `third-party`, for the next operation. State follows that operation, not everyone who might eventually participate:
+
+- **`ready`** — the next operation can proceed with available inputs and permission. Agent preparation is ready even if later publication needs a human.
+- **`blocked`** — an unmet prerequisite prevents that operation; name the dependency and what would resolve it.
+- **`waiting-human`** — the immediate next operation is a specific human decision, approval, or contribution that remains outstanding.
+- **`waiting-third-party`** — the immediate next operation belongs to an external party and the required request or submission has actually been made. Preparation for a future submission is not waiting on that party.
+- **`done`** — the Action's stated completion boundary has been met and checked. Preparation may be done while publication is pending as a separate Action.
+
+Split preparation, approval, publication, and observation when their completion or dependencies differ. A dependency or `needed:` list may be empty. Do not invent a request to keep work open, and do not treat publication approval as missing business evidence.
 
 ### Maintenance
 
@@ -240,6 +288,12 @@ Re-read the current Standard whenever work resumes. Re-check when the offer, cor
 7. **Observation is not hidden causality.** Record what a system said and the conditions under which it said it. Do not claim access to hidden model processes without direct evidence.
 8. **Questions must earn interruption.** Ask the human only to resolve a material uncertainty that cannot be established otherwise and that changes Scope, an Outcome, or the next Action.
 9. **Human authority remains where consequences leave the system.** A human approves new or materially changed consequential claims and direct third-party messages, submissions, outreach, reviews, PR, or partnership communication.
+
+## Continuing the work
+
+Hand off the business file together with the referenced sources and prepared artifacts, using links the next practitioner can access. State what was completed, the next operation, who can perform it, and any unmet prerequisite. If material must remain private, preserve that boundary and identify the access needed to continue; do not imply a recipient already has it.
+
+Anyone may apply the Standard without a particular vendor, tool, paid service, or standing review group. Conforming work preserves the six-section file, provenance, declared coverage, evidence-grounded State, Outcome-linked Actions, permission boundaries, and honest verification. Preparation can be independently useful; a published change still requires its own verification, and a commercial result requires its own observation.
 
 ## License
 
