@@ -230,7 +230,7 @@ needed:
 
 `verified` requires current evidence another person could inspect. For Observed findings, retain the test conditions and stated reasons, or link to a supporting observation log.
 
-State records findings, including adequate existing material worth reusing. Keep proposals and prepared artifacts in Actions; do not change public State merely because an agent drafted an improvement.
+State records findings, including adequate existing material worth reusing. Keep proposals and prepared artifacts in Actions; do not change public State merely because an agent drafted an improvement. The expected benefit of proposed work belongs with its rationale and follow-up, not in an `unsupported` State finding merely because the work has yet to be tried. Use `unsupported` for a consequential claim in the inspected corpus whose support is insufficient.
 
 ### Actions
 
