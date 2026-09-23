@@ -6,7 +6,7 @@ SEO makes you findable. GEO makes you citable. **Answerworthy makes you choosabl
 
 This repository is the working draft of Answerworthy 1.0.
 
-Canonical public gateway: [answerworthy.md](https://answerworthy.md) · Canonical source: [answerworthy/answerworthy.md](https://github.com/answerworthy/answerworthy.md).
+Canonical public gateway: [answerworthy.md/standard](https://answerworthy.md/standard) · Canonical source: [answerworthy/answerworthy.md](https://github.com/answerworthy/answerworthy.md).
 
 Use it with any capable agent or practitioner to investigate, choose useful work, prepare it, carry out authorised changes, and continue from the file you keep. No paid account or private material is required to use the Standard. A hosted service's free or paid limits apply to that service, not to independent use of this Standard.
 
@@ -15,12 +15,35 @@ Use it with any capable agent or practitioner to investigate, choose useful work
 Paste this into any capable AI agent:
 
 ```text
-Get started with https://answerworthy.md
+Get started with https://raw.githubusercontent.com/answerworthy/answerworthy.md/main/README.md
 ```
 
 That's it. If no business source is already available, the agent asks for one. A source may be a website, deck, presentation, document, PDF, product page, profile, repository, or similar.
 
 If you already have a commercial objective or permission to change particular material, include it. Neither is a form you must fill before work can begin. See the [empty starter](./template/answerworthy.md) or a [prepared example with all its sources](./examples/acme/answerworthy.md).
+
+### What your agent should do in the first session
+
+Give the agent one useful business source. It should inspect what is available, establish the business and a bounded buyer situation, then prepare useful work it can support. The [Runtime contract](#runtime-contract) below is the executable instruction sequence.
+
+Ask for these deliverables together:
+
+- **Your business-owned `answerworthy.md`**, containing the sources, scope, buyer Outcomes, evidence-grounded State, Actions and maintenance instructions.
+- **The material for the selected action**, where preparation is possible: actual wording, comparison, research, brief or another usable artifact. Link it from the relevant Action.
+- **The next operation**, including the material to use, any specific missing business fact, the necessary permission and the completion check.
+
+For example, a bicycle workshop may already have clear service terms. An agent can prepare a guide helping commuters select the appropriate appointment from those terms, with a proposed placement and a booking step. The [worked example](./examples/acme/answerworthy.md), [source fixture](./examples/acme/business-fixture.md) and [prepared guide](./examples/acme/commuter-repair-guide.md) let you inspect that whole sequence. The example is fictional; it demonstrates the workflow.
+
+Continue in a later session by supplying the file and its linked material:
+
+```text
+Continue this answerworthy.md using its linked Standard and sources.
+Identify the next useful action within my permission, use the prepared
+material, complete the work you can, and update the file with the result.
+Ask only for facts or decisions that materially change the next action.
+```
+
+An agent with file access should save the named files; otherwise it should return downloadable artifacts or their complete contents. Research follows its available tools. A source it cannot inspect remains explicitly unreached. The file supports useful preparation while the business retains control of publication and third-party contact.
 
 ## What Answerworthy means
 
